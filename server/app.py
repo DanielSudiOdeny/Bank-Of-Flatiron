@@ -5,6 +5,7 @@ from models.config import db
 from models.transactions import Transactions
 from models.user import User
 from flask import Flask
+from flask_cors import CORS
 
 
 app = Flask(__name__)
@@ -13,6 +14,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 migrate = Migrate(app, db)
 
+CORS(app)
 api = Api(app)
 db.init_app(app)
 

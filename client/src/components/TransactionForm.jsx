@@ -1,19 +1,28 @@
 import React from "react";
 import { TbPlus } from "react-icons/tb";
 import { MdClose } from "react-icons/md";
+
 const TransactionForm = ({ onClose }) => {
   return (
     <div className="rounded-lg shadow-lg p-4 bg-white flex flex-col ">
       <div className="flex  justify-between  p-4 items-center ">
-        <h3 className="font-bold text-lg">Create New Transaction</h3>
-        <button onClick={onClose} className="text-sky-700">
+        <h3 className="text-sky-700 font-bold text-lg">
+          Create New Transaction
+        </h3>
+        <button
+          onClick={onClose}
+          className="text-sky-700 bg-blue-50 hover:bg-blue-100 rounded-lg p-2"
+        >
           <MdClose size={32} />
         </button>
       </div>
       <form className="p-4">
         <div className="grid gap-4 grid-cols-2">
           <div className="col-span-2">
-            <label className="block mb-2 font-semibold" htmlFor="">
+            <label
+              className=" text-sky-700 block mb-2 font-semibold"
+              htmlFor=""
+            >
               Name
             </label>
             <input
@@ -23,7 +32,10 @@ const TransactionForm = ({ onClose }) => {
             />
           </div>
           <div className="col-span-2 sm:col-span-1">
-            <label className="block mb-2 font-semibold " htmlFor="amount">
+            <label
+              className="text-sky-700 block mb-2 font-semibold "
+              htmlFor="amount"
+            >
               Amount Spent
             </label>
             <input
@@ -33,18 +45,24 @@ const TransactionForm = ({ onClose }) => {
             />
           </div>
           <div className="col-span-2 sm:col-span-1 ">
-            <label className="block mb-2 font-semibold" htmlFor="category">
+            <label
+              className="text-sky-700 block mb-2 font-semibold"
+              htmlFor="category"
+            >
               Category
             </label>
             <select
               id="category"
               className="text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  placeholder-gray-400 "
             >
-              <option className="rounded-lg font-semibold " selected="">
+              <option
+                className="text-sky-700 rounded-lg font-semibold "
+                selected=""
+              >
                 Select category
               </option>
               <option
-                className="rounded-lg font-semibold text-sky-700"
+                className="  rounded-lg font-semibold text-sky-700"
                 value="entertainment"
               >
                 Entertainment
@@ -77,7 +95,10 @@ const TransactionForm = ({ onClose }) => {
           </div>
 
           <div className="col-span-2">
-            <label className="block mb-2 font-semibold" htmlFor="description">
+            <label
+              className="text-sky-700 block mb-2 font-semibold"
+              htmlFor="description"
+            >
               Description
             </label>
             <textarea
@@ -87,8 +108,8 @@ const TransactionForm = ({ onClose }) => {
               className=" text-sm w-full p-2 bg-gray-50 border-2 placeholder-gray-400 focus:ring-primary-600 focus:border-primary-600 border-gray-300     rounded-lg "
             ></textarea>
           </div>
-          <button className="col-span-2 w-3/5 md:w-1/4 p-2 bg-gradient-to-r from-blue-800 to-sky-600 rounded-lg shadow-lg text-sky-50  ">
-            <div className="flex gap-2 items-center">
+          <button className="col-span-2  mx-auto w-[250px] text-sm md:text-xl  p-2 bg-gradient-to-r from-blue-800 to-sky-600 rounded-lg shadow-lg text-sky-50  hover:bg-gradient-to-l hover:from-sky-800 hover:to-blue-600 duration-200">
+            <div className="flex gap-2  justify-center items-center">
               <span>
                 <TbPlus size={20} />{" "}
               </span>
